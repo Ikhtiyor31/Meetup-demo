@@ -1,10 +1,11 @@
 import express from "express";
 const app = express();
 app.use(express.json());
-
+app.enable('trust proxy'); // required for proxy setting
 import User from "./user.js";
 
 app.get("/server", (req, res) => {
+  console.log("request is coming!!")
   return res.send("<h1>Web server is working</h1>");
 });
 
