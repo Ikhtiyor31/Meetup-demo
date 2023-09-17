@@ -13,6 +13,8 @@ app.get("/api/v1/user", (req, res) => {
   return res.send(`name: ${req.query.name}`);
 });
 
+
+
 var userDB = new Map();
 app.post("/api/v1/users/signup", (req, res) => {
   const { username, password } = req.body;
@@ -37,7 +39,7 @@ app.post("/api/v1/users/signin", (req, res) => {
       .status(400)
       .send(`unexprected request fields ${JSON.stringify(req.body)}`);
   }
-
+  
   if (!userDB.has(username)) {
     return res.status(400).send("the username is wrong!");
   }
