@@ -1,19 +1,32 @@
-# Meetup-project
-this is a simple nodejs demo server for deploying to ec2
+# Meetup-demo
 
-build docker image
-docker build -t node-app-image 
+**Meetup-project** is a simple Node.js demo server for deploying to EC2.
 
-run image container without port
-docker run -d --name node-app node-app-image
+## Building and Running the Docker Image
 
-docker image container with port
-docker run -p 4000:3000 -d --name node-app node-app-image 
+**Build the Docker image:**
+```
+  docker build -t node-app-image .
+```
+**Run the image container without port mapping:**
+```
+  docker run -d --name node-app node-app-image
+```
+**Run the image container with port mapping (e.g., 4000 on the host to 3000 in the container):**
+```
+  docker run -p 4000:3000 -d --name node-app node-app-image
+```
+**Run the image container with volumes (mount current directory to /app in the container):**
+```
+  docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image
+```
 
-docker run with volumes 
-docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image
-
-docker compose build 
-docker compose up -d --build 
-
-to check real time logs of containers if load balancer is working
+## Using Docker Compose
+**to only build docker image with docker-compose**
+```
+  docker-compose build
+```
+**Build and start the services & container at once:**
+```
+  docker-compose up -d
+```
