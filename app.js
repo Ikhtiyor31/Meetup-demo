@@ -6,7 +6,7 @@ import User from "./user.js";
 
 app.get("/server", (req, res) => {
   console.log("request is coming!!")
-  return res.send("<h1>Web server is working</h1>");
+  return res.send("<h1>Web server is working (^.^) </h1>");
 });
 
 app.get("/api/v1/user", (req, res) => {
