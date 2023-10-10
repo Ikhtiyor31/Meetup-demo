@@ -1,8 +1,18 @@
-# Meetup-demo
+# Meetup-demo-CI-CD-deployment
+## 🎉 Intro
+This is an overview of a Meetup demo project's Continuous Integration/Continuous Deployment (CI/CD) deployment process. It describes how GitHub Actions automates the deployment workflow of a sample Nodejs app
+## Deployment Process 🕸️:
+This outlines the deployment process using GitHub Actions:
 
-**Meetup-project** is a simple Node.js demo server for deploying to EC2.
+  * :arrows_counterclockwise: GitHub Actions automatically checks out the main branch when a new commit is pushed.
+  * :whale: It builds a Docker image of the Node.js app.
+  * :cloud:  The Docker image is pushed to DockerHub.
+  * :desktop_computer:  Finally, it pulls the Docker image into an EC2 instance and runs the container.
+## Demployment process image 👀
+Here is an image demonstrating the process:  
+![image](https://github.com/Ikhtiyor31/Meetup-demo-CI-CD-deployment/assets/55629713/17a980e7-b5ec-4af0-9e85-ccd9ad1f2347)
 
-## Building and Running the Docker Image
+## Building and Running the Docker Image :oncoming_automobile:
 
 **Build the Docker image:**
 ```
