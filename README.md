@@ -1,6 +1,6 @@
 # Meetup-demo-CI-CD-deployment
 ## 🎉 Intro
-This is an overview of a Meetup demo project's Continuous Integration/Continuous Deployment (CI/CD) deployment process. It describes how GitHub Actions automates the deployment workflow of a sample Nodejs app
+This is an overview of a Meetup demo project's Continuous Integration/Continuous Deployment (CI/CD) deployment process. It demonstrates how GitHub Actions automates the deployment workflow of a sample Nodejs app
 ## Deployment Process 🕸️:
 This outlines the deployment process using GitHub Actions:
 
